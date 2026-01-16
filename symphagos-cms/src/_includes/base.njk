@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default("SYMPHAGOS — Wake the Wild, Sonic Seekers") }}</title>
+    
+    <!-- Google Fonts: Period-appropriate typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lemonsqueezy Checkout Overlay -->
+    <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+    
+    <style>
+        /* ========================================
+           SYMPHAGOS - Landing Page Styles
+           ======================================== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --parchment-light: #f4e4bc;
+            --parchment-mid: #e8d4a8;
+            --parchment-dark: #d4c4a0;
+            --ink-dark: #2c2416;
+            --ink-mid: #4a3c28;
+            --ink-faded: #6b5d4a;
+            --accent-gold: #8b7355;
+            --accent-rust: #7d4e3a;
+        }
+
+        body {
+            font-family: 'IM Fell English', Georgia, serif;
+            background-color: var(--parchment-light);
+            color: var(--ink-dark);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Parchment texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.08;
+        }
+
+        /* Aged paper edge effect */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            box-shadow: inset 0 0 150px rgba(139, 115, 85, 0.3);
+        }
+
+        /* ========================================
+           HEADER / HERO SECTION
+           ======================================== */
+        
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 2rem;
+            border: 3px solid var(--ink-faded);
+            box-shadow: 
+                0 0 0 1px var(--parchment-dark),
+                0 0 0 4px var(--ink-faded),
+                0 8px 32px rgba(44, 36, 22, 0.3);
+            position: relative;
+        }
+
+        .hero-image-container::before {
+            content: '{{ heroCaption | default("Fig. I — The HMS Bugle approaches Symphagos, 3rd Moon Cycle") }}';
+            position: absolute;
+            bottom: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--ink-faded);
+            white-space: nowrap;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(
+                180deg,
+                #1a1a2e 0%,
+                #16213e 30%,
+                #1a1a2e 60%,
+                #0f0f1a 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--parchment-light);
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-image.has-image {
+            background-image: var(--hero-bg);
+        }
+
+        /* Placeholder stars */
+        .hero-image:not(.has-image)::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(2px 2px at 20px 30px, white, transparent),
+                              radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+                              radial-gradient(1px 1px at 90px 40px, white, transparent),
+                              radial-gradient(2px 2px at 160px 120px, rgba(255,255,255,0.9), transparent),
+                              radial-gradient(1px 1px at 230px 80px, white, transparent),
+                              radial-gradient(2px 2px at 300px 150px, rgba(255,255,255,0.7), transparent),
+                              radial-gradient(1px 1px at 400px 60px, white, transparent),
+                              radial-gradient(2px 2px at 500px 180px, white, transparent),
+                              radial-gradient(1px 1px at 600px 100px, rgba(255,255,255,0.8), transparent),
+                              radial-gradient(2px 2px at 700px 40px, white, transparent);
+            background-size: 100% 100%;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .hero-image span {
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+            opacity: 0.7;
+        }
+
+        .title {
+            font-family: 'IM Fell English SC', Georgia, serif;
+            font-size: clamp(3rem, 10vw, 6rem);
+            letter-spacing: 0.3em;
+            margin-top: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 var(--parchment-dark);
+        }
+
+        .slogan {
+            font-family: 'IM Fell English', Georgia, serif;
+            font-style: italic;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: var(--ink-mid);
+            margin-bottom: 3rem;
+            letter-spacing: 0.15em;
+        }
+
+        .transmission {
+            max-width: 700px;
+            padding: 2rem;
+            border: 1px solid var(--ink-faded);
+            background: linear-gradient(
+                135deg,
+                rgba(244, 228, 188, 0.5) 0%,
+                rgba(232, 212, 168, 0.5) 100%
+            );
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .transmission::before {
+            content: '❧';
+            position: absolute;
+            top: -0.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--parchment-light);
+            padding: 0 1rem;
+            color: var(--ink-faded);
+            font-size: 1.5rem;
+        }
+
+        .transmission-label {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            color: var(--ink-faded);
+            margin-bottom: 1rem;
+        }
+
+        .transmission p {
+            font-size: 1.1rem;
+            text-align: left;
+            text-indent: 2rem;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: var(--ink-mid);
+        }
+
+        /* ========================================
+           SPECIMENS SECTION
+           ======================================== */
+        
+        .specimens-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'IM Fell English SC', Georgia, serif;
+            font-size: 2rem;
+            text-align: center;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-style: italic;
+            color: var(--ink-faded);
+            margin-bottom: 3rem;
+        }
+
+        .specimens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .specimen-card {
+            border: 2px solid var(--ink-faded);
+            background: linear-gradient(
+                145deg,
+                var(--parchment-light) 0%,
+                var(--parchment-mid) 100%
+            );
+            padding: 1.5rem;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .specimen-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(44, 36, 22, 0.2);
+        }
+
+        .specimen-number {
+            position: absolute;
+            top: -0.8rem;
+            left: 1rem;
+            background: var(--parchment-light);
+            padding: 0 0.5rem;
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.8rem;
+            color: var(--ink-faded);
+            letter-spacing: 0.1em;
+        }
+
+        .specimen-image {
+            width: 100%;
+            height: 200px;
+            background: var(--parchment-dark);
+            border: 1px solid var(--ink-faded);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: var(--ink-faded);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .specimen-name {
+            font-family: 'IM Fell English SC', Georgia, serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .specimen-class {
+            font-size: 0.85rem;
+            color: var(--ink-faded);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .specimen-description {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            color: var(--ink-mid);
+        }
+
+        .specimen-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--ink-faded);
+            padding-top: 1rem;
+        }
+
+        .specimen-price {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 1.1rem;
+        }
+
+        .specimen-price.free {
+            color: var(--accent-rust);
+        }
+
+        .acquire-btn {
+            font-family: 'IM Fell English SC', serif;
+            background: var(--ink-dark);
+            color: var(--parchment-light);
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .acquire-btn:hover {
+            background: var(--accent-rust);
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--ink-faded);
+            margin-top: 4rem;
+        }
+
+        .footer-ornament {
+            font-size: 1.5rem;
+            color: var(--ink-faded);
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            color: var(--ink-faded);
+            font-style: italic;
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        
+        @media (max-width: 600px) {
+            .hero-image {
+                height: 250px;
+            }
+            
+            .title {
+                letter-spacing: 0.15em;
+            }
+            
+            .transmission {
+                padding: 1.5rem;
+            }
+            
+            .specimens-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    {{ content | safe }}
+    
+    <!-- Netlify Identity Widget for CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

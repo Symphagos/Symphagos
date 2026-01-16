@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: SYMPHAGOS — Wake the Wild, Sonic Seekers
+heroCaption: "Fig. I — The HMS Bugle approaches Symphagos, 3rd Moon Cycle"
+---
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-image-container">
+        <div class="hero-image">
+            <span>[ Your header image: HMS Bugle approaching Symphagos ]</span>
+        </div>
+    </div>
+    
+    <h1 class="title">SYMPHAGOS</h1>
+    <p class="slogan">Wake the Wild, Sonic Seekers.</p>
+    
+    <div class="transmission">
+        <p class="transmission-label">— TRANSMISSION FROM THE OUTER REACHES —</p>
+        <p>
+            To whomever intercepts this signal — I am transmitting from coordinates 
+            beyond your charted heavens, where sound itself takes breath and form. 
+            The creatures of this world do not merely produce music; they <em>are</em> music, 
+            biomechanical symphonies waiting to be awakened by curious hands.
+        </p>
+        <p style="margin-top: 1rem;">
+            I send you these specimens not as tools, but as companions — 
+            living instruments from another space and time, entrusted to fellow seekers of the wild sonic.
+        </p>
+        <p class="signature">
+            — Dr. __________, HMS Bugle<br>
+            <span style="font-size: 0.85rem;">Symphagos Expedition, Cycle 7</span>
+        </p>
+    </div>
+</section>
+
+<!-- SPECIMENS SECTION -->
+<section class="specimens-section">
+    <h2 class="section-title">DOCUMENTED SPECIMENS</h2>
+    <p class="section-subtitle">Catalogued sonic lifeforms, available for acquisition</p>
+    
+    <div class="specimens-grid">
+        {% for specimen in collections.specimens %}
+        <article class="specimen-card">
+            <span class="specimen-number">SPECIMEN NO. {{ specimen.data.specimenNumber | string | padStart(3, '0') }}</span>
+            <div class="specimen-image" {% if specimen.data.image %}style="background-image: url('/images/{{ specimen.data.image }}')"{% endif %}>
+                {% if not specimen.data.image %}<span>[ Creature illustration ]</span>{% endif %}
+            </div>
+            <h3 class="specimen-name">{{ specimen.data.name }}</h3>
+            <p class="specimen-class">Class: {{ specimen.data.class }}</p>
+            <p class="specimen-description">{{ specimen.data.description }}</p>
+            <div class="specimen-footer">
+                <span class="specimen-price {% if specimen.data.price == 'FREE' %}free{% endif %}">
+                    {% if specimen.data.price == 'FREE' %}FREE — Introductory Specimen{% else %}{{ specimen.data.price }}{% endif %}
+                </span>
+                <a href="{{ specimen.data.checkoutUrl }}?embed=1" class="lemonsqueezy-button acquire-btn">ACQUIRE SPECIMEN</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-ornament">❦</div>
+    <p>
+        Transmissions from Symphagos © Cycle 7<br>
+        All specimens documented under the Galactic Naturalist Accord
+    </p>
+</footer>

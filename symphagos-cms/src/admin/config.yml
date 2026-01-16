@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "specimens"
+    label: "Specimens"
+    folder: "src/specimens"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Specimen Number", name: "specimenNumber", widget: "number", value_type: "int", min: 1 }
+      - { label: "Name", name: "name", widget: "string", hint: "e.g., The Ember Stallion" }
+      - { label: "Class", name: "class", widget: "string", hint: "e.g., Equus Ignifer — Percussive / Rhythmic" }
+      - { label: "Description", name: "description", widget: "text", hint: "The lore/discovery notes for this specimen" }
+      - label: "Price"
+        name: "price"
+        widget: "string"
+        hint: "e.g., $9 or FREE"
+      - label: "Creature Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Upload the creature illustration"
+      - label: "Lemonsqueezy Checkout URL"
+        name: "checkoutUrl"
+        widget: "string"
+        hint: "Paste your Lemonsqueezy checkout link here"

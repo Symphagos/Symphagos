@@ -1,0 +1,12 @@
+{
+  "name": "symphagos",
+  "version": "1.0.0",
+  "description": "Symphagos - Wake the Wild, Sonic Seekers",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

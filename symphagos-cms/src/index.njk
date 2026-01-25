@@ -37,9 +37,33 @@ heroCaption: "Fig. I — The HMS Bugle approaches Symphagos, 3rd Moon Cycle"
     <h2 class="section-title">DOCUMENTED SPECIMENS</h2>
     <p class="section-subtitle">Catalogued sonic lifeforms, available for acquisition</p>
     
+    <!-- FILTERS -->
+    <div class="filter-controls">
+        <div class="filter-group">
+            <label>Type:</label>
+            <select id="filter-type">
+                <option value="all">All Specimens</option>
+                <option value="Species">Species</option>
+                <option value="Soundscape">Soundscape</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>Sort:</label>
+            <select id="filter-sort">
+                <option value="date-new">Newest First</option>
+                <option value="date-old">Oldest First</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+    
     <div class="specimens-grid">
         {% for specimen in collections.specimens %}
-        <article class="specimen-card">
+        <article class="specimen-card" 
+                 data-type="{{ specimen.data.type | default('Species') }}"
+                 data-price="{{ specimen.data.priceValue | default(0) }}"
+                 data-date="{{ specimen.data.dateAdded | default('2025-01-01') }}">
             <span class="specimen-number">SPECIMEN NO. {{ specimen.data.specimenNumber | string | padStart(3, '0') }}</span>
             <div class="specimen-image" {% if specimen.data.image %}style="background-image: url('/images/{{ specimen.data.image }}')"{% endif %}>
                 {% if not specimen.data.image %}<span>[ Creature illustration ]</span>{% endif %}
@@ -57,3 +81,52 @@ heroCaption: "Fig. I — The HMS Bugle approaches Symphagos, 3rd Moon Cycle"
         {% endfor %}
     </div>
 </section>
+
+<!-- FILTER JAVASCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const typeFilter = document.getElementById('filter-type');
+    const sortFilter = document.getElementById('filter-sort');
+    const grid = document.querySelector('.specimens-grid');
+    const cards = Array.from(document.querySelectorAll('.specimen-card'));
+    
+    function filterAndSort() {
+        const typeValue = typeFilter.value;
+        const sortValue = sortFilter.value;
+        
+        // Filter
+        let filtered = cards.filter(card => {
+            if (typeValue === 'all') return true;
+            return card.dataset.type === typeValue;
+        });
+        
+        // Sort
+        filtered.sort((a, b) => {
+            switch(sortValue) {
+                case 'date-new':
+                    return new Date(b.dataset.date) - new Date(a.dataset.date);
+                case 'date-old':
+                    return new Date(a.dataset.date) - new Date(b.dataset.date);
+                case 'price-low':
+                    return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                case 'price-high':
+                    return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                default:
+                    return 0;
+            }
+        });
+        
+        // Hide all
+        cards.forEach(card => card.style.display = 'none');
+        
+        // Show and reorder filtered
+        filtered.forEach(card => {
+            card.style.display = '';
+            grid.appendChild(card);
+        });
+    }
+    
+    typeFilter.addEventListener('change', filterAndSort);
+    sortFilter.addEventListener('change', filterAndSort);
+});
+</script>

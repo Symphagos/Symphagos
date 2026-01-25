@@ -405,9 +405,62 @@
                 grid-template-columns: 1fr;
             }
         }
+/* HEADER */
+.site-header {
+    text-align: center;
+    padding: 2rem 2rem 1rem;
+}
+
+.main-nav {
+    margin-bottom: 2rem;
+}
+
+.main-nav a {
+    font-family: 'IM Fell English SC', Georgia, serif;
+    color: var(--ink-mid);
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-rust);
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.site-logo {
+    max-width: 500px;
+    width: 90%;
+    height: auto;
+}
+
+.header-slogan {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--ink-mid);
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+}
     </style>
 </head>
 <body>
+<!-- HEADER -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="/">Specimens</a>
+            <a href="/contact/">Communications</a>
+        </nav>
+        <a href="/" class="logo-link">
+            <img src="/images/symphagos_logo.svg" alt="Symphagos" class="site-logo">
+        </a>
+        <p class="header-slogan">Wake the Wild, Sonic Seekers.</p>
+    </header>
     {{ content | safe }}
     
     <!-- FOOTER -->

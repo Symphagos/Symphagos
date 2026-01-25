@@ -11,15 +11,32 @@ collections:
     folder: "symphagos-cms/src/specimens"
     create: true
     slug: "{{slug}}"
-    fields:
+   fields:
       - { label: "Specimen Number", name: "specimenNumber", widget: "number", value_type: "int", min: 1 }
       - { label: "Name", name: "name", widget: "string", hint: "e.g., The Ember Stallion" }
       - { label: "Class", name: "class", widget: "string", hint: "e.g., Equus Ignifer — Percussive / Rhythmic" }
       - { label: "Description", name: "description", widget: "text", hint: "The lore/discovery notes for this specimen" }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Species", "Soundscape"]
+        default: "Species"
       - label: "Price"
         name: "price"
         widget: "string"
-        hint: "e.g., $9 or FREE"
+        hint: "e.g., $9 or FREE or $0+"
+      - label: "Price Value"
+        name: "priceValue"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        default: 0
+        hint: "Numeric price for sorting (0 for free)"
+      - label: "Date Added"
+        name: "dateAdded"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        default: ""
       - label: "Creature Image"
         name: "image"
         widget: "image"

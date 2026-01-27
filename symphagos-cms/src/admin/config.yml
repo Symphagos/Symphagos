@@ -2,6 +2,9 @@ backend:
   name: github
   repo: Symphagos/Symphagos
   branch: main
+  base_url: https://api.decapcms.org
+  auth_type: pkce
+  app_id: Ov23liJECk7LW4v9hAUO
 
 media_folder: "symphagos-cms/src/images"
 public_folder: "/images"

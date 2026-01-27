@@ -2,8 +2,6 @@ backend:
   name: github
   repo: Symphagos/Symphagos
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 media_folder: "symphagos-cms/src/images"
 public_folder: "/images"

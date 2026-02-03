@@ -13,6 +13,6 @@ Observe the oodles of options to oscillate this undulating ungulate. Play with p
 Sync this syncopated stallion to your tempo, or let this rhythmic racehorse run free, but either way, enjoy it for free.  Blaze new trails with Gait Runner. 
 
 price: $0
-image: 
+
 checkoutUrl: https://YOUR-STORE.lemonsqueezy.com/checkout/buy/YOUR-PRODUCT-ID
 ---

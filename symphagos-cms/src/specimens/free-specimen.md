@@ -1,18 +1,30 @@
 ---
-specimenNumber: 2
-name: Gait Runner
-class: Ungulatus undulatus
-description: >
+specimenNumber: 1
+name: "Kophon: The Rock Star Volume 1"
+description: "As I descended deep into the Blumooda system, seasoned star haulers warned of a perilous pentangle known as the flat five, drenched in devilish dissonance. Deliverance from its discordant depths remains…unresolved.
 
-5000 earth cycles after Eadweard Muybridge masterfully mesmerized us with mathematical motion capture, a new Symphagos species of quantizeable quadruped now captures my curiosity: Gait runner, an equine effect that encourages experimentation straight out of the gate.
+And those bold enough to brave the Blumooda Pentangle must face the wrath of Kophon: The Rock Star.
 
-Echoing the rhythms of Muybridge’s mathematics, Gait Runner has two modes: walk and gallop, but this stuttery stampeder is not merely a one trick pony.
 
-Observe the oodles of options to oscillate this undulating ungulate. Play with pitch, vary velocity, fine tune filtering, randomize rhythm, and more.
+If Symphagos is the birther of biology sustained by sound, Kophon, its sinister sun, is the salient sonic silencer. Sound and silence, life and death, daisy-chained in a delicate duet.
 
-Sync this syncopated stallion to your tempo, or let this rhythmic racehorse run free, but either way, enjoy it for free.  Blaze new trails with Gait Runner. 
 
-price: $0
+Opportunely, the orbital oscillation of Symphagos saved my ship from scalding slaughter.
 
-checkoutUrl: https://YOUR-STORE.lemonsqueezy.com/checkout/buy/YOUR-PRODUCT-ID
+
+Subsequently, I mobilized a monitoring module to document this diabolical disk of destruction on whose heat I now definitively depend.
+
+Venture into the volatile vault of volume 1.
+
+~ Dr. Dara Dawes
+Earth cycle 5878, moon cycle 1
+
+Contains 78 dark cinematic ambient samples from the Blumooda system. 
+48khz 24bit wav  804.9 MB"
+type: "Soundscape"
+price: "$0+"
+priceValue: 0
+dateAdded: 2026-02-17
+image: "kophon.jpg"
+checkoutUrl: "https://symphagos.lemonsqueezy.com/buy/xxxxx"
 ---

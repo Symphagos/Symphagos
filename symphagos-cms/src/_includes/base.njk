@@ -132,36 +132,17 @@
             background-position: center;
         }
 
-        .hero-image.has-image {
-            background-image: var(--hero-bg);
-        }
+@media (max-width: 768px) {
+  .hero-image {
+    background-size: contain;
+    background-position: center top;
+  }
+}
 
-.hero-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(
-                180deg,
-                #1a1a2e 0%,
-                #16213e 30%,
-                #1a1a2e 60%,
-                #0f0f1a 100%
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--parchment-light);
-            font-style: italic;
-            position: relative;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
-        }
         .hero-image.has-image {
             background-image: var(--hero-bg);
         }
-        
-        /* ADD THIS: Mobile hero image fix */
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
             .hero-image {
                 background-size: contain;
                 background-position: center top;

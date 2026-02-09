@@ -1,22 +1,9 @@
 ---
 specimenNumber: 1
-name: "Kophon"
+name: "Kophon: The Rock Star Volume 1"
 class: "Species"
 description: |
-  As I descended deep into the Blumooda system, seasoned star haulers warned of a perilous pentangle known as the flat five, drenched in devilish dissonance. Deliverance from its discordant depths remains…unresolved.
-
-  And those bold enough to brave the Blumooda Pentangle must face the wrath of Kophon: The Rock Star.
-
-  If Symphagos is the birther of biology sustained by sound, Kophon, its sinister sun, is the salient sonic silencer. Sound and silence, life and death, daisy-chained in a delicate duet.
-
-  Opportunely, the orbital oscillation of Symphagos saved my ship from scalding slaughter.
-
-  Subsequently, I mobilized a monitoring module to document this diabolical disk of destruction on whose heat I now definitively depend.
-
-  Venture into the volatile vault of volume 1.
-
-  ~ Dr. Dara Dawes
-  Earth cycle 5878, moon cycle 1
+  Volume 1 of field recordings of Symphagos' sinister sun
 
   Contains 78 dark cinematic ambient samples from the Blumooda system. 
   48khz 24bit wav  804.9 MB

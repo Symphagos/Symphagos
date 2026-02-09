@@ -451,18 +451,20 @@ margin-top: auto;
         }
 /* HEADER */
 .site-header {
-    background: something;
-    padding: something;
+    background: var(--parchment-light);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--ink-faded);
 }
 
+/* Hide header on homepage only */
 .home-page .site-header {
     display: none;
 }
-
 .main-nav {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    display: block;
 }
-
 .main-nav a {
     font-family: 'IM Fell English SC', Georgia, serif;
     color: var(--ink-mid);
@@ -472,7 +474,6 @@ margin-top: auto;
     letter-spacing: 0.1em;
     transition: color 0.3s ease;
 }
-
 .main-nav a:hover {
     color: var(--accent-rust);
 }
@@ -494,12 +495,10 @@ margin-top: auto;
 }
 
 .header-slogan {
-    font-family: 'IM Fell English', Georgia, serif;
-    font-style: italic;
-    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
     color: var(--ink-mid);
-    margin-top: 0.5rem;
-    letter-spacing: 0.1em;
+    font-style: italic;
 }
 /* FILTERS */
 .filter-controls {

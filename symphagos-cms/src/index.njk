@@ -5,6 +5,34 @@ heroCaption: "Fig. I — Planet Symphagos."
 bodyClass: home-page
 ---
 
+<style>
+.site-header {
+    display: none !important;
+}
+.hero-image-container {
+    border: none !important;
+    box-shadow: none !important;
+}
+.hero-overlay {
+    position: absolute !important;
+    top: 45% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+}
+@media (max-width: 768px) {
+    .hero-overlay {
+        top: 50% !important;
+    }
+    .hero-logo {
+        margin-bottom: 0.8rem !important;
+    }
+}
+</style>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
 <!-- HERO SECTION -->
 <section class="hero">
     <div class="hero-image-container">

@@ -6,7 +6,7 @@ description: >
   As I descended deep into the Blumooda system, seasoned star haulers warned of a perilous pentangle known as the flat five, drenched in devilish dissonance. Deliverance from its discordant depths 
   remains…unresolved.
 
-  "And those bold enough to brave the Blumooda Pentangle must face the wrath of Kophon: The Rock Star."
+  And those bold enough to brave the Blumooda Pentangle must face the wrath of Kophon: The Rock Star.
 
 
   If Symphagos is the birther of biology sustained by sound, Kophon, its sinister sun, is the salient sonic silencer. Sound and silence, life and death, daisy-chained in a delicate duet.

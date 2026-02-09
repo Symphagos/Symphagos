@@ -6,16 +6,7 @@ bodyClass: home-page
 ---
 
 <style>
-.site-header {
-    display: block !important;
-    visibility: visible !important;
-}
-.section-subtitle {
-    font-size: 1.3rem !important;
-}
-.main-nav {
-    display: block !important;
-}
+/* regular styles */
 .hero-image-container {
     border: none !important;
     box-shadow: none !important;
@@ -27,38 +18,20 @@ bodyClass: home-page
     transform: translate(-50%, -50%) !important;
     text-align: center !important;
 }
+
+/* mobile styles */
 @media (max-width: 768px) {
-    .hero-overlay {
-        top: 35% !important;
-    }
-    .hero-logo {
-        width: 400px !important;
-        margin-bottom: 0.5rem !important;
-    }
-    .hero-tagline {
-        font-size: 2rem !important;
-    }
-    .hero-image {
-        height: 50vh !important;
-        min-height: 400px !important;
-    }
-    .hero-image-container {
-        margin-bottom: 0 !important;
-    }
-    .hero {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    .specimens-section {
-        padding-top: 2rem !important;
-    }
-    .filter-controls {
-        display: flex !important;
-        gap: 1rem !important;
-    }
-    .filter-group {
-        flex: 1 !important;
-    }
+    /* all your mobile stuff */
+}
+
+/* add after mobile closes */
+.hero-image-container {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.hero-image {
+    border: none !important;
+    border-top: none !important;
 }
 </style>
 

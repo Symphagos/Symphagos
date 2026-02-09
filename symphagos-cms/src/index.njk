@@ -98,7 +98,7 @@ header nav a {
         </div>
         <div class="filter-group">
             <label>Sort:</label>
-            <select id="filter-sort">
+            filter
                 <option value="date-new">Newest First</option>
                 <option value="date-old">Oldest First</option>
                 <option value="price-low">Price: Low to High</option>
@@ -175,7 +175,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    typeFilter.addEventListener('change', filterAndSort);
+typeFilter.addEventListener('change', filterAndSort);
     sortFilter.addEventListener('change', filterAndSort);
+    
+    // Run on page load to apply default sort
+    filterAndSort();
 });
 </script>

@@ -551,7 +551,7 @@ margin-top: auto;
 }
     </style>
 </head>
-<body class="{{ bodyClass }}">
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 <!-- HEADER -->
     <header class="site-header">
         <nav class="main-nav">

@@ -553,6 +553,7 @@ body.home-page .site-header {
 </head>
 <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
 <!-- HEADER -->
+    {% if bodyClass != 'home-page' %}
     <header class="site-header">
         <nav class="main-nav">
            <a href="/#specimens">Specimens</a>
@@ -563,6 +564,7 @@ body.home-page .site-header {
         </a>
         <p class="header-slogan">Wake the Wild, Sonic Seekers.</p>
     </header>
+    {% endif %}
     {{ content | safe }}
     
     <!-- FOOTER -->

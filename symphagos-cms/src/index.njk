@@ -6,6 +6,9 @@ bodyClass: home-page
 ---
 
 <style>
+header {
+    border-bottom: none !important;
+}
 /* regular styles */
 .hero-image-container {
     border: none !important;
@@ -21,17 +24,37 @@ bodyClass: home-page
 
 /* mobile styles */
 @media (max-width: 768px) {
-    /* all your mobile stuff */
-}
-
-/* add after mobile closes */
-.hero-image-container {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-.hero-image {
-    border: none !important;
-    border-top: none !important;
+    .hero-overlay {
+        top: 42% !important;
+    }
+    .hero-logo {
+        width: 400px !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .hero-tagline {
+        font-size: 2rem !important;
+    }
+    .hero-image {
+        height: 40vh !important;
+        min-height: 350px !important;
+    }
+    .hero-image-container {
+        margin-bottom: 0 !important;
+    }
+    .hero {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .specimens-section {
+        padding-top: 2rem !important;
+    }
+    .filter-controls {
+        display: flex !important;
+        gap: 1rem !important;
+    }
+    .filter-group {
+        flex: 1 !important;
+    }
 }
 </style>
 

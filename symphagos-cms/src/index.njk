@@ -158,8 +158,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Sort
         filtered.sort((a, b) => {
             switch(sortValue) {
-                case 'date-new':
-                    return new Date(b.dataset.date) - new Date(a.dataset.date);
+                 case 'date-new':
+                    const dateCompare = new Date(b.dataset.date) - new Date(a.dataset.date);
+                    if (dateCompare === 0) {
+                        // If dates are equal, sort by specimen number (higher first)
+                        return parseInt(b.querySelector('.specimen-number').textContent.match(/\d+/)[0]) - 
+                               parseInt(a.querySelector('.specimen-number').textContent.match(/\d+/)[0]);
+                    }
+                    return dateCompare;
                 case 'date-old':
                     return new Date(a.dataset.date) - new Date(b.dataset.date);
                 case 'price-low':

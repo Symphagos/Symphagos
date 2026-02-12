@@ -80,17 +80,17 @@ layout: base.njk
     {% if image %}
     <img src="/images/{{ image }}" alt="{{ title }}" class="specimen-detail-image">
     {% endif %}
-    {% if embedCode %}
+{% if embedCode %}
     <div class="specimen-media">
         {{ embedCode | safe }}
     </div>
     {% endif %}
-    <div class="specimen-full-description">
-        {{ description | safe }}
-    </div>
     <div class="acquire-button-container">
         <a href="{{ checkoutUrl }}?embed=1" class="lemonsqueezy-button acquire-button-large">
             ACQUIRE SPECIMEN — {{ price }}
         </a>
+    </div>
+    <div class="specimen-full-description">
+        {{ description | safe }}
     </div>
 </div>

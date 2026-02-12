@@ -130,7 +130,7 @@ header nav a {
                 <span class="specimen-price {% if specimen.data.price == 'FREE' %}free{% endif %}">
                     {% if specimen.data.price == 'FREE' %}FREE — Introductory Specimen{% else %}{{ specimen.data.price }}{% endif %}
                 </span>
-                <a href="{{ specimen.data.checkoutUrl }}?embed=1" class="lemonsqueezy-button acquire-btn">VIEW SPECIMEN</a>
+                <a href="/{{ specimen.fileSlug }}/" class="acquire-btn">VIEW SPECIMEN</a>
             </div>
         </article>
         {% endfor %}

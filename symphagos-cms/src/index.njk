@@ -123,7 +123,7 @@ header nav a {
             <div class="specimen-image" {% if specimen.data.image %}style="background-image: url('/images/{{ specimen.data.image }}')"{% endif %}>
                 {% if not specimen.data.image %}<span>[ Creature illustration ]</span>{% endif %}
             </div>
-            <h3 class="specimen-name">{{ specimen.data.name }}</h3>
+            <h3 class="specimen-name"><a href="/{{ specimen.fileSlug }}/" style="color: inherit; text-decoration: none;">{{ specimen.data.name }}</a></h3>
             <p class="specimen-class">Class: {{ specimen.data.class }}</p>
         <div class="specimen-description">{{ specimen.data.description | safe }}</div>
             <div class="specimen-footer">

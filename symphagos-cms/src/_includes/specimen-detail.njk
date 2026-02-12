@@ -1,0 +1,96 @@
+---
+layout: base.njk
+---
+<style>
+.specimen-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+.specimen-detail-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.specimen-title {
+    font-family: 'IM Fell English SC', Georgia, serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--ink-dark);
+}
+.specimen-class {
+    font-size: 1.1rem;
+    color: var(--ink-faded);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+.specimen-detail-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    display: block;
+    border: 2px solid var(--ink-faded);
+}
+.specimen-media {
+    margin: 2rem 0;
+}
+.specimen-full-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 2rem 0;
+    color: var(--ink-mid);
+    white-space: pre-line;
+}
+.acquire-button-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+.acquire-button-large {
+    display: inline-block;
+    background: var(--ink-dark);
+    color: var(--parchment-light);
+    padding: 1rem 3rem;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+.acquire-button-large:hover {
+    background: var(--accent-rust);
+    transform: translateY(-2px);
+}
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--ink-mid);
+    text-decoration: none;
+    font-family: 'IM Fell English SC', serif;
+}
+.back-link:hover {
+    color: var(--accent-rust);
+}
+</style>
+<div class="specimen-detail">
+    <a href="/#specimens" class="back-link">← Back to Specimens</a>
+    
+    <div class="specimen-detail-header">
+        <h1 class="specimen-title">{{ title }}</h1>
+        <p class="specimen-class">{{ specimenClass }}</p>
+    </div>
+    {% if image %}
+    <img src="/images/{{ image }}" alt="{{ title }}" class="specimen-detail-image">
+    {% endif %}
+    {% if embedCode %}
+    <div class="specimen-media">
+        {{ embedCode | safe }}
+    </div>
+    {% endif %}
+    <div class="specimen-full-description">
+        {{ description | safe }}
+    </div>
+    <div class="acquire-button-container">
+        <a href="{{ checkoutUrl }}?embed=1" class="lemonsqueezy-button acquire-button-large">
+            ACQUIRE SPECIMEN — {{ price }}
+        </a>
+    </div>
+</div>

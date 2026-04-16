@@ -7,8 +7,8 @@ description: |
 
   787 retrofuturistic samples from the HMS Bugle
   48khz 24bit wav 2.88 GB
-price: "$48 launch special, ends April 15th"
-priceValue: 48
+price: "$78"
+priceValue: 78
 dateAdated: 2026-04-06
 image: "The_Bugle_Vol1.webp"
 checkoutUrl: "https://symphagos.com/the-bugle-vol1/"

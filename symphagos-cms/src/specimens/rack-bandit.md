@@ -6,7 +6,7 @@ description: |
   A creative “critter call band EQ” with an analog twist
 
   AU format for MacOS
- 9.3 MB
+  9.3 MB
 price: "$38"
 priceValue: 38
 dateAdated: 2026-04-30

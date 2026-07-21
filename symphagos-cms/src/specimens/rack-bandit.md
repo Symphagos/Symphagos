@@ -7,7 +7,7 @@ description: |
 
   AU format for MacOS
   9.3 MB
-price: "$38"
+price: "$8 before Aug 1 using code: MERRYWANDERER"
 priceValue: 38
 dateAdated: 2026-04-30
 image: "Rack_Bandit.webp"

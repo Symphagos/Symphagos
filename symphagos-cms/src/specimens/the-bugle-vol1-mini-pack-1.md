@@ -1,7 +1,6 @@
 ---
 specimenNumber: 4
-name: "The Bugle Volume 1: Mini Pack 1 |
-  UI, Computer, & Comms"
+name: "The Bugle Vol 1: Mini Pack 1 UI, Computer, & Comms"
 class: "Soundscape"
 description: |
   Technological Tapulations from the larger Bugle soundscape.

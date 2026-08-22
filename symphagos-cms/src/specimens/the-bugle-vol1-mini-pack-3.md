@@ -1,6 +1,6 @@
 ---
 specimenNumber: 6
-name: "The Bugle Volume 1 Mini Pack 3 Spaceship Engines & Machinery"
+name: "The Bugle Vol 1: Mini Pack 3 Spaceship Engines & Machinery"
 class: "Soundscape"
 description: |
   Embouchure Engine and Manifold Maneuvers from the larger Bugle soundscape.

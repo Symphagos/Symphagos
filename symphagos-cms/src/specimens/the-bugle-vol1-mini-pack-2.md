@@ -1,6 +1,6 @@
 ---
 specimenNumber: 5
-name: "The Bugle Volume 1 Mini Pack 2 Impacts, Weapons, & Energy"
+name: "The Bugle Vol 1: Mini Pack 2 Impacts, Weapons, & Energy"
 class: "Soundscape"
 description: |
   Bombastic Blasts and Energy Zaps from the larger Bugle soundscape.

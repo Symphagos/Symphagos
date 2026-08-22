@@ -1,6 +1,6 @@
 ---
 specimenNumber: 7
-name: "The Bugle Volume 1 Mini Pack 4 Space Ambience & Anomalies"
+name: "The Bugle Vol 1: Mini Pack 4 Space Ambience & Anomalies"
 class: "Soundscape"
 description: |
   Euphonium Echoes and Crooks in the Calibrators from the larger Bugle soundscape.

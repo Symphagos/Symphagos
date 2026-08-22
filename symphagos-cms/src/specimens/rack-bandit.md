@@ -1,5 +1,5 @@
 ---
-specimenNumber: 4
+specimenNumber: 8
 name: "Rack Bandit"
 class: "Species"
 description: |

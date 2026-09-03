@@ -5,7 +5,7 @@ class: "Species"
 description: |
   A creative “critter call band EQ” with an analog twist
 
-  AU format for MacOS
+  VST3 and AU format for MacOS
   33.6 MB
 price: "$38"
 priceValue: 38

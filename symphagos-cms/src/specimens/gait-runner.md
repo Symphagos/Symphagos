@@ -6,7 +6,7 @@ description: |
   A rhythmic gate galloper inspired by Eadweard Muybridge's 1878 horse motion studies
 
   AU format for MacOS
-  7.1 MB
+  22.2 MB
 price: "$0+"
 priceValue: 0
 dateAdated: 2026-02-17

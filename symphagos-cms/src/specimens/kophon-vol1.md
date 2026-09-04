@@ -5,7 +5,7 @@ class: "Soundscape"
 description: |
   Volume 1 of Symphagos' sinister scorching sun
 
-  Contains 78 dark cinematic ambient samples from the Blumooda system. 
+  Contains 75 dark cinematic ambient samples from the Blumooda system. 
   48khz 24bit wav  804.9 MB
 price: "$0+"
 priceValue: 0

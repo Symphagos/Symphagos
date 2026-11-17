@@ -7,8 +7,8 @@ description: |
 
   VST3 and AU format for MacOS
   33.6 MB
-price: "$38"
-priceValue: 38
+price: "$8 with code DUMPSTERDIVE until Dec 1st"
+priceValue: 8
 dateAdated: 2026-04-30
 image: "Rack_Bandit.webp"
 checkoutUrl: "https://symphagos.com/rack-bandit/"
